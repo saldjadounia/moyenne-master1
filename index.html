@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcul Moyenne Master 1 Sécurité</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+<div class="container py-4">
+    <h1 class="text-center text-primary mb-4">Calcul Moyenne – Master 1 Sécurité Informatique</h1>
+
+    <!-- Semestre 1 -->
+    <h2 class="text-secondary mt-4">Semestre 1</h2>
+    <div id="s1-matieres" class="row g-3">
+
+        <!-- UEF11 -->
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Algorithmique avancée et complexité (Coef 3)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Bases de données avancées (Coef 3)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <!-- UEF12 -->
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Outils mathématiques pour la cryptographie (Coef 3)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Intelligence artificielle pour la cybersécurité (Coef 3)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <!-- UEM1 -->
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Introduction à la sécurité informatique (Coef 2)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Piratage éthique et défense des systèmes (Coef 2)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <!-- UET1 -->
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">DevOps (Coef 1)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <!-- UED1 -->
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Matière au choix (Coef 1)</label>
+            <input type="number" class="form-control note-input" placeholder="Note /20">
+        </div>
+
+    </div>
+
+    <div class="text-center mt-3">
+        <button class="btn btn-primary btn-lg" onclick="calculerSemestre(1)">Calculer Semestre 1</button>
+    </div>
+    <p id="s1" class="text-center fw-bold mt-3"></p>
+
+    <!-- Semestre 2 -->
+    <h2 class="text-secondary mt-5">Semestre 2</h2>
+    <div id="s2-matieres" class="row g-3">
+
+        <!-- UEF21 -->
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Cryptographie et sécurité (Coef 3)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Sécurité et criminalistique des bases de données (Coef 3)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <!-- UEF22 -->
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Réseaux avancés et sécurité (Coef 3)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Cybercriminalité (Coef 3)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <!-- UEM2 -->
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Forensiques multimédia et sécurité (Coef 2)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Sécurité de l'IoT (Coef 2)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <!-- UET2 -->
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Gestion de projets informatiques (Coef 1)</label>
+            <input type="number" class="form-control note-input" placeholder="Exam /20">
+            <input type="number" class="form-control note-input" placeholder="TD /20">
+            <input type="number" class="form-control note-input" placeholder="TP /20">
+        </div>
+
+        <!-- UED2 -->
+        <div class="col-12 col-md-6">
+            <label class="form-label fw-bold">Matière au choix (Coef 1)</label>
+            <input type="number" class="form-control note-input" placeholder="Note /20">
+        </div>
+
+    </div>
+    <div class="text-center mt-3">
+        <button class="btn btn-primary btn-lg" onclick="calculerSemestre(2)">Calculer Semestre 2</button>
+    </div>
+    <p id="s2" class="text-center fw-bold mt-3"></p>
+
+</div>
+
+    <!-- Bouton Moyenne Générale -->
+    <div class="text-center mt-4">
+        <button class="btn btn-success btn-lg" onclick="calculerMoyenneGenerale()">Calculer Moyenne Générale</button>
+    </div>
+    <p id="general" class="text-center fw-bold mt-3"></p>
+
+</div>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
